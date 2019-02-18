@@ -1,0 +1,138 @@
+body{
+    .footer{
+        background-color: #1d1d1d;
+    }
+    .site-footer {
+        background-color: #1d1d1d;
+        color: #fff;
+        font-family: "Omnes";
+        font-weight: 400;
+        height: auto;
+        min-height: 300px;
+        overflow: hidden;
+        padding-bottom: 80px;
+        position: relative;
+        width: 100%;
+        z-index: 10;
+
+        .layout-container {
+            margin-left: auto;
+            margin-right: auto;
+            //max-width: 1024px;
+            //padding-left: 20px;
+            //padding-right: 20px;
+            padding-top: 60px;
+
+            .site-footer--top {
+                -ms-flex-pack: justify;
+                -ms-flex-wrap: wrap;
+                -webkit-box-pack: justify;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                nav, .social-menu {
+                    display: inline-block;
+                    margin: 0;
+                    list-style: none outside;
+                    margin-left: 1em;
+                    padding: 0;
+                    text-align: left;
+
+                    ul.menu, ul.links {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    h2 {
+                        font-family: "Begum-Bold";
+                        color: #fff;
+                        font-size: 20px;
+                        //font-weight: 700;
+                        margin: 0 0 10px;
+                    }
+                    li{
+                        list-style: none;
+                        
+                        a {
+                            color: #fff;
+                            font-size: 13px;
+                            font-weight: 200;
+                            text-decoration: none;
+
+                            &:hover.youtube {
+                                background-color: #e62117;
+                            }
+                            &:hover.facebook {
+                                background-color: #3b5998;
+                            }
+                            &:hover.instagram {
+                                background: radial-gradient(circle at 33% 100%,#fed373 4%,#f15245 30%,#d92e7f 62%,#9b36b7 85%,#515ecf);
+                            }
+                            &:hover.linkedin {
+                                background-color: #187fb8;
+                            }
+                        }
+                    }
+                    li a:first-child {
+                        margin-left: 0;
+                    }
+                }
+                .social-menu ul.links li{
+
+                    display: inline-block;
+                    
+                    a{
+                        -webkit-transition: all .2s ease;
+                        background-color: #222;
+                        display: block;
+                        height: 70px;
+                        line-height: 70px;
+                        margin: 0 2px;
+                        overflow: hidden;
+                        text-align: center;
+                        transition: all .2s ease;
+                        width: 70px;
+                        img {
+                            height: 30px;
+                            vertical-align: middle;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .site-footer--top .footer-content {
+        text-align: center!important;
+        width: 50%;
+        margin-left: 0!important;
+        nav {
+            margin: 20px 10px!important;
+            text-align: center;
+            ul.menu {
+                text-align: center;
+            }
+            h2 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    }
+    .social-menu {
+        padding-top: 20px!important;
+    }
+    
+}
+
+@media only screen and (max-width: 767px){
+    .site-footer--top .footer-content {
+        width: 100%;
+    }
+    
+}

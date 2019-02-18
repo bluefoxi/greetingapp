@@ -1,0 +1,223 @@
+body{
+    
+    .messages-wrapper {
+        height: auto;
+        overflow: hidden;
+        pointer-events: none;
+        position: fixed;
+        right: 0;
+        top: 100px;
+        width: 380px;
+        max-width: 95vw;
+        z-index: 99999999999;
+
+        .hide{
+            display: none;
+        }
+        
+      
+        .messages--error {
+            -webkit-animation: anim 7s 1;
+            -webkit-box-shadow: 3px 4px 6px 2px rgba(0,0,0,.1);
+            -webkit-transform: translateX(calc(100% - 30px));
+            -webkit-transition: all .3s ease;
+            animation: anim 7s 1;
+            background-color: #fff;
+            border: 1px solid #bf4343;
+            border-radius: 0;
+            box-shadow: 3px 4px 6px 2px rgba(0,0,0,.1);
+            color: #0f0f0f;
+            cursor: pointer;
+            height: auto;
+            margin-bottom: 10px;
+            margin-top: 0!important;
+            max-width: 95vw;
+            min-width: 380px;
+            overflow-wrap: break-word;
+            padding: 15px 20px 40px 40px;
+            pointer-events: all;
+            transform: translateX(calc(100% - 30px));
+            transition: all .3s ease;
+            width: 100%;
+            word-wrap: break-word;
+
+            &:before,&:after {
+                background-color: #bf4343;
+                background-position: 50%;
+                bottom: 0;
+                content: "";
+                cursor: pointer;
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 30px;
+                z-index: 20;
+                
+            }
+            &:after {
+                background-image: url("../img/error.svg");
+                background-repeat: no-repeat;
+                background-size: auto 20px;
+                z-index: 50;
+                    background-position: 50%;
+            }
+
+            
+            &:hover {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+
+            .close {
+                content:'';
+                background-color: #eee;
+                bottom: 0;
+                cursor: pointer;
+                height: 30px;
+                line-height: 30px;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                width: 100%;
+                z-index: 5;
+                font-family: "Omnes";
+                font-size: 1rem;
+                font-weight: 400;
+                color: black;
+            }
+
+            .visually-hidden {
+                position: absolute !important;
+                clip: rect(1px,1px,1px,1px);
+                overflow: hidden;
+                height: 1px;
+                width: 1px;
+                word-wrap: normal;
+            }
+
+        }
+        .messages--succes {
+            -webkit-animation: animSucces 7s 1;
+            -webkit-box-shadow: 3px 4px 6px 2px rgba(0,0,0,.1);
+            -webkit-transform: translateX(calc(100% + 30px));
+            -webkit-transition: all .3s ease;
+            animation: animSucces 7s 1;
+            background-color: #fff;
+            border: 1px solid #4BB543;
+            border-radius: 0;
+            box-shadow: 3px 4px 6px 2px rgba(0,0,0,.1);
+            color: #0f0f0f;
+            cursor: pointer;
+            height: auto;
+            margin-bottom: 10px;
+            margin-top: 0!important;
+            max-width: 95vw;
+            min-width: 380px;
+            overflow-wrap: break-word;
+            padding: 15px 20px 40px 40px;
+            pointer-events: all;
+            transform: translateX(calc(100% + 30px));
+            transition: all .3s ease;
+            width: 100%;
+            word-wrap: break-word;
+
+            &:before,&:after {
+                background-color: #4BB543;
+                background-position: 50%;
+                bottom: 0;
+                content: "";
+                cursor: pointer;
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 30px;
+                z-index: 20;
+                
+            }
+            &:after {
+                background-image: url("../img/check.svg");
+                background-repeat: no-repeat;
+                background-size: auto 20px;
+                z-index: 50;
+                    background-position: 50%;
+            }
+
+            
+            &:hover {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+
+            .close {
+                content:'';
+                background-color: #eee;
+                bottom: 0;
+                cursor: pointer;
+                height: 30px;
+                line-height: 30px;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                width: 100%;
+                z-index: 5;
+                font-family: "Omnes";
+                font-size: 1rem;
+                font-weight: 400;
+                color: black;
+            }
+
+            .visually-hidden {
+                position: absolute !important;
+                clip: rect(1px,1px,1px,1px);
+                overflow: hidden;
+                height: 1px;
+                width: 1px;
+                word-wrap: normal;
+            }
+
+
+        }
+    }
+}
+
+@keyframes anim {
+    0% {
+        -webkit-transform: translateX(calc(100% - 30px));
+        transform: translateX(calc(100% - 30px));
+    }
+    14% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    85% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(100% - 30px));
+        transform: translateX(calc(100% - 30px));
+    }
+  }
+
+  @keyframes animSucces {
+    0% {
+        -webkit-transform: translateX(calc(100% - 30px));
+        transform: translateX(calc(100% - 30px));
+    }
+    14% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    85% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(100% + 30px));
+        transform: translateX(calc(100% + 30px));
+    }
+  }
