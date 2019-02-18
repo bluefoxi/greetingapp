@@ -8,5 +8,5 @@ the react code is located in clientapp folder
 to run server and client at the same time you can use
 "npm run start-all" from the root
 
-*remember to use npm install for both client and server"
+*remember to use npm install for both client and server*
 
